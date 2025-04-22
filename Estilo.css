@@ -53,6 +53,15 @@ big-shoulders-stencil{
       nav ul li a:hover {
         color: #329835;
       }
+        details{
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+      details:hover{
+        color: #329835;
+      }
       /* Sección de Inicio (Hero) */
       .hero {
         position: relative;
@@ -287,6 +296,11 @@ big-shoulders-stencil{
         .mapa{
         margin-left: 470px;
         }
+          .informacion-2{
+         
+          background-color: rgba(55, 55, 55, 0.5);
+          height: auto;
+        }
       }
 
   
@@ -351,4 +365,33 @@ big-shoulders-stencil{
   .image2{
     height: 400px;
   }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    background: #bdbdbd;
+    border-radius: 10px;
+}
+.product {
+    min-width: 300px;
+    background: #9e9e9e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+.productos{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 25px;
+  color: #4CAF50;
+  text-transform: capitalize;
+  font-size: 20pt;
+}
  
