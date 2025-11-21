@@ -1,0 +1,150 @@
+  body {
+  font-family: Arial, sans-serif;
+  background: #f3f8fc;
+  display: flex;
+  flex-direction: column;   /* 👈 Muy importante: ahora todo va en columna */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Caja de los formularios */
+.form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  width: 100%;
+  background: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #005f87;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.titulo-principal {
+  text-align: center;
+  color: #000;
+  margin: 10px 0 20px;
+}
+
+/* Logo + nombre de empresa dentro del formulario */
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logo2 {
+  width: 60px;
+  height: 60px;
+}
+
+.logo_titulo {
+  margin: 0;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Sección informativa PQRS */
+.info-pqrs {
+  max-width: 600px;
+  margin: 10px auto 20px;
+  background: #f3f8fc;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border-left: 4px solid #0077b6;
+  font-size: 14px;
+}
+
+.info-pqrs h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-pqrs ul {
+  margin-left: 18px;
+}
+
+/* Botones de selección de formulario */
+.botones-contenedor {
+  display: flex;
+  flex-direction: row;   /* si los quieres uno debajo del otro: column */
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0 20px;
+  flex-wrap: wrap;
+}
+
+.botones-contenedor button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  width: auto; /* que no ocupen todo el ancho */
+}
+
+.btn-normal {
+  background: #0077b6;
+  color: white;
+}
+
+.btn-anonimo {
+  background: #6c757d;
+  color: white;
+}
+
+/* Ocultar formularios */
+.oculto {
+  display: none;
+}

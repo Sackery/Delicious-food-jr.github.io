@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario PQRS</title>
+    <link rel="stylesheet" href="Estilo3.css">
+</head>
+<body>
+
+
+  <!-- Sección informativa sobre PQRS -->
+  <section class="info-pqrs">
+    <h1>¿Qué es una PQRS?</h1>
+    <p>
+      Una <strong>PQRS</strong> es una solicitud que puede tomar la forma de 
+      <strong>Petición, Queja, Reclamo o Sugerencia</strong> que realiza un usuario
+      para manifestar una inconformidad, solicitar información o proponer mejoras 
+      sobre los servicios ofrecidos por Delicious Food JR.
+    </p>
+    <ul>
+      <li><strong>Petición:</strong> Solicitud de información o servicio.</li>
+      <li><strong>Queja:</strong> Inconformidad frente a la atención recibida.</li>
+      <li><strong>Reclamo:</strong> Inconformidad frente a un producto o servicio.</li>
+      <li><strong>Sugerencia:</strong> Propuesta para mejorar procesos o servicios.</li>
+    </ul>
+    <p>
+      Por favor diligencia todos los campos del formulario con información clara y 
+      veraz para poder dar respuesta oportuna a tu PQRS.
+    </p>
+  </section>
+  <h1 style="text-align:center;">Sistema de PQRS</h1>
+
+  <!-- Botones para elegir formulario -->
+  <div class="botones-contenedor">
+    <button type="button" class="btn-normal" onclick="mostrarFormulario('normal')">
+      Formulario PQRS con datos
+    </button>
+    <button type="button" class="btn-anonimo" onclick="mostrarFormulario('anonimo')">
+      Formulario PQRS anónima
+    </button>
+  </div>
+  <form class="form-container oculto" id="pqrsForm">
+    <img src="Logo2.png" alt="logo2" class="logo2">
+    <h1 class="logo_titulo">Delicious Food JR</h1>
+    <h2>Formulario PQRS</h2>
+
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" required>
+
+    <label for="barrio">Barrio:</label>
+    <input type="text" id="barrio" name="barrio" required>
+
+    <label for="celular">Celular:</label>
+    <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" placeholder="Ejemplo: 3001234567" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+    <label for="tipo">Tipo de solicitud:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Peticion">Petición</option>
+      <option value="Queja">Queja</option>
+      <option value="Reclamo">Reclamo</option>
+      <option value="Sugerencia">Sugerencia</option>
+      <option value="Sugerencia">Felicitaciones</option>
+    </select>
+
+    <label for="destinatario">Hacia quién se realiza la PQRS:</label>
+    <select id="tipo2" name="tipo2" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Área Administrativa">Área Administrativa</option>
+      <option value="Área De Producción">Área De Producción</option>
+      <option value="Área De Almacen">Área De Almacen</option>
+      <option value="Área De Bodega">Área De Bodega</option>
+      </select>
+
+   
+
+    <label for="detalles">Detalles de la PQRS:</label>
+    <textarea id="detalles" name="detalles" placeholder="Describe los hechos o motivos..." required></textarea>
+
+    <button type="submit">Enviar Formulario</button>
+     <p id="mensaje"></p>
+  </form>
+  <form class="form-container oculto" id="pqrsAnonimaForm">
+    <img src="Logo2.png" alt="logo2" class="logo2">
+    <h1 class="logo_titulo">Delicious Food JR</h1>
+    <h2>PQRS Anónima</h2>
+
+    <label for="tipoAnon">Tipo de solicitud:</label>
+    <select id="tipoAnon" name="tipoAnon" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Petición">Petición</option>
+      <option value="Queja">Queja</option>
+      <option value="Reclamo">Reclamo</option>
+      <option value="Sugerencia">Sugerencia</option>
+    </select>
+      <label for="areaAnon">Asunto</label>
+      <input type="text" placeholder="Indica la solicitud">
+    <label for="areaAnon">Hacia qué área se realiza la PQRS:</label>
+    <select id="areaAnon" name="areaAnon" required>
+      <option value="">Selecciona una opción</option>
+      <option value="Área Administrativa">Área Administrativa</option>
+      <option value="Área de Producción">Área de Producción</option>
+      <option value="Área de Almacén">Área de Almacén</option>
+      <option value="Área de Bodega">Área de Bodega</option>
+    </select>
+
+    <label for="detallesAnon">Detalles de la PQRS:</label>
+    <textarea id="detallesAnon" name="detallesAnon" 
+              placeholder="Describe los hechos, fechas aproximadas, lugar, personas involucradas (sin necesidad de identificarte)..." 
+              required></textarea>
+
+    <button type="submit">Enviar PQRS Anónima</button>
+    <p id="mensajeAnon" style="text-align:center; font-weight:bold;"></p>
+  </form>
+
+  <script src="Formulario.js"></script>
+
+</body>
+</html>

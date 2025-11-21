@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Estilos/Estilo.css">
+  <title>Delicious Food JR S.A.S</title>
+  
+</head>
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav>
+      <img class="Logo1" src="Logo2.png" alt="">
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#producto">Nuestros Productos</a></li>
+   
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+  </header>
+  
+  <!-- Sección Inicio -->
+  <section id="inicio" class="hero">
+    <video autoplay loop muted>
+      <source src="perro.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="overlay">
+      <h1>Bienvenidos a <br>
+        DELICIOUS FOOD JR S.A.S</h1>
+      <p>Comprometidos con la calidad y el bienestar de las mascotas a través de snacks naturales e innovadores.</p>
+    </div>
+  </section>
+
+    <div id="producto" class="productos">
+    <h3>productos</h3>
+</div>
+
+<div class="carousel">
+    <div class="product">
+        <img src="orejas.jpeg" alt="Producto 1">
+        <h3>Orejas de Cerdo </h3>
+        <p>Las orejas de Cerdo son una excelente fuente de proteínas, ya que aportan ácidos grasos omega-3 y omega-6.</p>
+    </div>
+    <div class="product">
+        <img src="traquea.jpeg" alt="Producto 2">
+        <h3>Tráquea de res</h3>
+        <p>Este delicioso y duradero snack masticable está recomendado para perros medianos y extra grandes en cualquier etapa de su vida. Ofrece valiosos beneficios para la salud. Es rico en nutrientes como la glucosamina y la condroitina, que promueven la salud y la movilidad de las articulaciones de los perros.</p>
+    </div>
+    <div class="product">
+        <img src="rollos.jpeg" alt="Producto 3">
+        <h3>Rollos de mejillas </h3>
+        <p>Los rollitos de carrillera son 100 % naturales y están hechos con carrilleras suaves, gruesas y de fácil digestión. Son un snack natural sin sabor</p>
+    </div>
+    <div class="product">
+        <img src="esofago.jpeg" alt="Producto 3">
+        <h3>Esófago de res </h3>
+        <p>Los snacks de esófago son una de las mejores opciones para los dueños de perros y una alternativa más saludable. Consisten en esófago bovino que se puede cortar en tiras, trenzar en palitos y luego deshidratar. El esófago de res es nutritivo y completamente natural, con un sabor delicioso para tu amigo canino y una larga vida útil.</p>
+    </div>
+    <div class="product">
+        <img src="cola.jpeg" alt="Producto 3">
+        <h3>Cola de res</h3>
+        <p>La cola de res está llena de Omega 3, excelente para el corazón de tu perro. Además, es baja en grasas y rica en proteínas, lo que la convierte en un premio saludable. Es una fuente natural de calcio, fósforo y colágeno, que ayuda a mantener huesos, pelaje y piel más sanos.</p>
+    </div>
+    <div class="product">
+        <img src="femur.jpeg" alt="Producto 3">
+        <h3>Fémur de cerdo </h3>
+        <p>Nuestro fémur de cerdo está perfectamente deshidratado; aplicamos un proceso que lo endurece y le otorga una textura única, permitiendo que la mascota disfrute masticándolo y se entretenga mientras lo mastica. Este snack se desmenuza fácilmente al masticarlo y tragarlo, lo que permite limpiar sus dientes de sarro y placa, protegiendo sus encías.</p>
+    </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 DELICIOUS FOOD JR S.A.S. Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+  
+    // Función para abrir el menú y ocultar el botón
+    function openMenu() {
+      navMenu.classList.add('active');
+      hamburger.style.display = 'none';
+    }
+  
+    // Función para cerrar el menú y mostrar el botón
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      hamburger.style.display = 'flex';
+    }
+  
+    // Al hacer clic en el botón hamburguesa, abre el menú
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evita que el clic se propague al documento
+      openMenu();
+    });
+  
+    // Cierra el menú si se hace clic fuera de éste o del botón hamburguesa
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  
+    // Opcional: Cierra el menú cuando se hace clic en un enlace de navegación
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+  </script>
+  <script>
+    // Selecciona el enlace de Portfolio (asegúrate que tenga href="#portfolio")
+    const portfolioLink = document.querySelector('a[href="#portfolio"]');
+    
+    portfolioLink.addEventListener('click', function(e) {
+      e.preventDefault(); // Evita la acción por defecto del enlace
+      document.body.classList.toggle('portfolio-mode');
+    });
+  </script>
+</body>
+</html>
