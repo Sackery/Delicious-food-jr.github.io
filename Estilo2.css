@@ -370,4 +370,27 @@ footer{
             margin-right: 699px;
     }
   
+
+  }
+ /*nuevo*/
+  .section-content2{
+    width: 900%;
+  }
+  .image2{
+    width: 800px;
+    height: 600px;
+  }
+  .section-text2{
+    text-align: center;
+  }
+  .link2{
+    width: 90%;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    background-color: #329835;
+  }
+  .link2:hover{
+    color: rgb(30, 30, 30);
+    background-color: #028302;
   }
