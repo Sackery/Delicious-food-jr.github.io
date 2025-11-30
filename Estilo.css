@@ -542,4 +542,53 @@ body.portfolio-mode .analysis .card {
 .right {
     right: 10px;
 }
+#clientes {
+  padding: 40px 20px;
+  background-color: #ffffff;        /* cambia el color si quieres */
+}
+
+.logos-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logos-title {
+  color: #4CAF50;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Grid de logos */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 30px;
+  align-items: center;
+}
+
+/* Cada logo */
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-item img {
+  /* borde opcional */
+  max-width: 380px;   /* tamaño máximo del logo */
+  width: 190%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.4));  /* opcional */
+}
+.logo-item img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+}
+.logo-item3 {
+  border-radius: 50%;
+}
+
 
