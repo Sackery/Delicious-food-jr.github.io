@@ -2,6 +2,10 @@
     
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
 
+summary{
+  list-style: none;
+}
+
 
 big-shoulders-stencil{
   font-family: "Big Shoulders Stencil", sans-serif;
@@ -592,3 +596,10 @@ body.portfolio-mode .analysis .card {
 }
 
 
+h3{
+  color: #4CAF50;
+
+}
+.section-title2{
+  font-size: 30pt;
+}
