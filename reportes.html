@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>Mostrar Evidencias</title>
+    
+</head>
+
+<header>
+    <nav id="menu">
+      <img class="Logo1" src="Logo2.png" alt="">
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#mision">Reportes</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+  </header>
+
+    <div class="video-section">
+        <video autoplay muted loop>
+            <source src="perro.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <h1>Bienvenidos a Delicious food jr sas</h1>
+    </div>
+    
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="perro.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="texto-superior">
+        <h1>Bienvenidos a Delicious food jr sas</h1>
+        </div>
+    </div>
+    <div class="section1">
+    </div>
+    <center>
+    <div>
+    <h1>Análisis financieros</h1>
+    <p>
+        Nuestra empresa Delicious Food J.R. ofrece un acceso transparente a nuestros informes corporativos. <br> Estos documentos están fundamentados en datos confiables y reflejan nuestros resultados operativos, <br> financieros y de calidad. Nos comprometemos a presentar información estructurada y
+         verificable <br>para fortalecer la transparencia y la confianza con clientes y aliados. <br> Aquí podrá consultar indicadores de gestión, 
+         resultados de auditorías y análisis de producción</p></div>
+</center>
+    <div id="mision" class="section">
+        <h2>CRM Delicious Food JR</h2>
+        <div class="section-content section-content2">
+          <img src="12.png" alt="12" class="image2">
+        </div>
+        </div>
+        
+        <div class="section-text section-text2">
+            <a href="CRM-DELICIOUS-FOOD1.accdb" target="_blank" download="CRM-DELICIOUS-FOOD1.accdb" class="parrafo1 link2">&nbsp;&nbsp;&nbsp;CRM-DELICIOUS-FOOD1&nbsp;&nbsp;&nbsp;</a>
+        </div>
+    </div>
+   
+    <footer>
+        <p>&copy; 2025 DELICIOUS FOOD JR S.A.S. Todos los derechos reservados.</p>
+      </footer>
+    
+   
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+      
+        // Función para abrir el menú y ocultar el botón
+        function openMenu() {
+          navMenu.classList.add('active');
+          hamburger.style.display = 'none';
+        }
+      
+        // Función para cerrar el menú y mostrar el botón
+        function closeMenu() {
+          navMenu.classList.remove('active');
+          hamburger.style.display = 'flex';
+        }
+      
+        // Al hacer clic en el botón hamburguesa, abre el menú
+        hamburger.addEventListener('click', (e) => {
+          e.stopPropagation(); // Evita que el clic se propague al documento
+          openMenu();
+        });
+      
+        // Cierra el menú si se hace clic fuera de éste o del botón hamburguesa
+        document.addEventListener('click', (e) => {
+          if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+          }
+        });
+      
+        // Opcional: Cierra el menú cuando se hace clic en un enlace de navegación
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            closeMenu();
+          });
+        });
+      </script>
+</html>
