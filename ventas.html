@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <title>Mostrar Evidencias</title>
+    
+</head>
+
+<header>
+    <nav id="menu">
+      <img class="Logo1" src="Logo2.png" alt="">
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#mision">Ventas</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+  </header>
+
+    <div class="video-section">
+        <video autoplay muted loop>
+            <source src="perro.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <h1>Bienvenidos a Delicious food jr sas</h1>
+    </div>
+    
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="perro.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="texto-superior">
+        <h1>Bienvenidos a Delicious food jr sas</h1>
+        </div>
+    </div>
+    <div class="section1">
+    </div>
+    <center>
+    <div>
+    <h1>Ventas</h1>
+    <p>
+Delicious Food J.R. es la empresa de snacks naturales para perros. <br> Ofrecemos productos de máxima calidad, frescura y funcionalidad, 
+cuidadosamente seleccionados para las necesidades de tu mascota. <br>Garantizamos precios competitivos, envío rápido y atención 
+personalizada para una compra segura y la mejor relación calidad-precio.</p></div>
+</center>
+    <div id="mision" class="section">
+        <h2>Cotizacion</h2>
+        <div class="section-content section-content2">
+          <img src="grafico_1.png" alt="markenting" class="image2">
+        </div>
+        </div>
+        
+        <div class="section-text section-text2">
+            <a href="https://docs.google.com/spreadsheets/d/1QCN0jSI6sbE4NzE-pgUQfbSa0VYiN2Pq/edit?gid=2017210554#gid=2017210554" target="_blank" class="parrafo1 link2">&nbsp;&nbsp;&nbsp;Ver Hojas De Calculos&nbsp;&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    <div id="mision" class="section">
+        <h2>Compras</h2>
+        <div class="section-content section-content2">
+          <img src="grafico_2.png" alt="markenting" class="image2">
+        </div>
+        </div>
+        
+        <div class="section-text section-text2">
+            <a href="https://docs.google.com/spreadsheets/d/1sJqAojTgF3pY2UiUfT5utQTg_4OoWn8Z/edit?gid=1142420658#gid=1142420658" target="_blank" class="parrafo1 link2">&nbsp;&nbsp;&nbsp;Ver Hojas De Calculos&nbsp;&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    <div id="mision" class="section">
+        <h2>Cambio</h2>
+        <div class="section-content section-content2">
+          <img src="grafico_3.png" alt="markenting" class="image2">
+        </div>
+        </div>
+        
+        <div class="section-text section-text2">
+            <a href="https://docs.google.com/spreadsheets/d/1MZ8HxozLLGtff2tJ3Nw8w2wY9mMxOdGV/edit?gid=1798700105#gid=1798700105" target="_blank" class="parrafo1 link2">&nbsp;&nbsp;&nbsp;Ver Hojas De Calculos&nbsp;&nbsp;&nbsp;</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 DELICIOUS FOOD JR S.A.S. Todos los derechos reservados.</p>
+      </footer>
+    
+   
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+      
+        // Función para abrir el menú y ocultar el botón
+        function openMenu() {
+          navMenu.classList.add('active');
+          hamburger.style.display = 'none';
+        }
+      
+        // Función para cerrar el menú y mostrar el botón
+        function closeMenu() {
+          navMenu.classList.remove('active');
+          hamburger.style.display = 'flex';
+        }
+      
+        // Al hacer clic en el botón hamburguesa, abre el menú
+        hamburger.addEventListener('click', (e) => {
+          e.stopPropagation(); // Evita que el clic se propague al documento
+          openMenu();
+        });
+      
+        // Cierra el menú si se hace clic fuera de éste o del botón hamburguesa
+        document.addEventListener('click', (e) => {
+          if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+          }
+        });
+      
+        // Opcional: Cierra el menú cuando se hace clic en un enlace de navegación
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            closeMenu();
+          });
+        });
+      </script>
+</html>
